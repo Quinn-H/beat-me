@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Grid = ({ }) => (
-  <div className='controller'>
-    <h1>This is Grid</h1>
+const Grid = ({props}) => (
+  <div className='Grid'>
+    
   </div>
 )
 
