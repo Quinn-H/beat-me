@@ -2,14 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha484-rwoIResjU2yc4z8GV/NPeZWAv56rSmLldC4R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-4.1.1.slim.min.js" integrity="sha484-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs4hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha484-DztdAPBWPRXSA/4eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha484-vBWWzlZJ8ea9aCX4pEW4rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
     <title>Beat Me</title>
-    <style>
-      #stop-start {
-        font-size: 36px;
-        height: 100px;
-        width: 500px;
-      }
-    </style>
     <script>
       // App
 
@@ -74,24 +72,91 @@
 
     </script>
   </head>
-  <body>
-    <button id="stop-start" onclick="clickStopStart()">Start</button>
-    <table style="width:100%">
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Age</th>
-      </tr>
-      <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
-      </tr>
-    </table>
-  </body>
+<body>
+  <h1>BEAT ME UP</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <button type="button" class="col-4 btn btn-default">Synth</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+        <button type="button" class="col-1 btn btn-default">.</button>
+      </div>
+      <div class="row">
+        <div class="col-4">Synth</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-4">Kick</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-4">Snare</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-4">Hat</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-4">Tom</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-4">Fx</div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+          <button class="btn btn-default col-8 start" onclick="clickStopStart()">START</button>
+          <button class="btn btn-default col-4 bpm">BPM</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

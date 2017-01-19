@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  color: lightgrey;
+  font-size: 8em;
+  background-color: black;
+}
+
+.btn-default {
+  margin: 0px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.start {
+  text-align: center;
+  color: white;
+  font-size: 6em;
+  background-color: #D90429;
+}
+
+.bpm{
+  text-align: center;
+  color: white;
+  font-size: 6em;
+  background-color: #D90429;
+}
+
+.container {
+  margin: 0%;
+}
+.row {
+  margin: 0.8%;
+}
