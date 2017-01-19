@@ -8,6 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
   },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ti-Bretin/beat-me.git"
