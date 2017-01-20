@@ -49,19 +49,19 @@ const App = React.createClass({
   },
 
   render () {
-    const state = this.state
     const tracks = this.state.tracks.map((track, trackIndex) => {
       return {
         index: trackIndex,
         name: track.name,
         steps: track.steps.map((step, stepIndex) => {
+          const onClick = () => {
+            this.setState(toggleStep(this.state, trackIndex, stepIndex))
+          }
           return {
             index: stepIndex,
             isCurrent: step.isCurrent,
             isSet: step.isSet,
-            onClick () {
-              this.setState(toggleStep(state, trackIndex, stepIndex))
-            }
+            onClick
           }
         })
       }
@@ -76,6 +76,15 @@ const App = React.createClass({
         <Controller isPlaying={isPlaying} start={start} stop={stop}/>
       </div>
     )
+  },
+
+  start () {
+    intervalId = setInterval(beat, stepTime)
+  },
+
+  stop () {
+    clearInterval(intervalId)
+    intervalId = null
   }
 
 })
