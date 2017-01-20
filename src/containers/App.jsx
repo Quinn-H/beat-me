@@ -75,6 +75,7 @@ const App = React.createClass({
   },
 
   render () {
+    const currentStep = this.state.currentStep
     const tracks = this.state.tracks.map((track, trackIndex) => {
       return {
         index: trackIndex,
@@ -85,7 +86,7 @@ const App = React.createClass({
           }
           return {
             index: stepIndex,
-            isCurrent: step.isCurrent,
+            isCurrent: stepIndex === currentStep,
             isSet: step.isSet,
             onClick
           }
@@ -99,14 +100,14 @@ const App = React.createClass({
       <div>
         <Header />
         <Grid threads={tracks} tracks={tracks} />
-        <button onClick={start}>Start</button>
-        <button onClick={stop}>Stop</button>
         <Controller isPlaying={isPlaying} start={start} stop={stop}/>
       </div>
     )
   },
 
   start () {
+    if (this.isPlaying())
+      return // Do nothing
     const stepTime = 1000 * 60 / this.state.bpm
     const newState = Object.assign({}, this.state)
     newState.intervalId = setInterval(this.beat, stepTime)
@@ -114,6 +115,8 @@ const App = React.createClass({
   },
 
   stop () {
+    if (!this.isPlaying())
+      return // Do nothing
     clearInterval(this.state.intervalId)
     const newState = Object.assign({}, this.state)
     newState.intervalId = null

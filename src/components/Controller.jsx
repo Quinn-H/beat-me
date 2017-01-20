@@ -1,14 +1,16 @@
 import React from 'react'
 
 const Controller = (props) => {
-  const controller = props.controller
-  const onClick = controller.onClick
+  const start = props.start
+  const stop = props.stop
+  const isPlaying = props.isPlaying
+  console.log(isPlaying)
   return(
-  <td>
-    <button type="button" className="btn btn-outline-danger" onClick={onClick}>
-    </button>
-  </td>
-)
+    <div>
+      <button className={`btn btn-${isPlaying ? '' : 'outline-'}success`} onClick={start}>Start</button>
+      <button className={`btn btn-${isPlaying ? 'outline-' : ''}danger`} onClick={stop}>Stop</button>
+    </div>
+  )
 }
 
 export default Controller
