@@ -1,0 +1,8 @@
+exports[`test Step renders correctly 1`] = `
+<td>
+  <button
+    className="btn btn-outline-primary"
+    onClick={[Function]}
+    type="button" />
+</td>
+`;

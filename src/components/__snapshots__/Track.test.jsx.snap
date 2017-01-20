@@ -1,0 +1,9 @@
+exports[`test Track renders correctly 1`] = `
+<tr
+  className="track">
+  <th
+    className="row">
+    Kick
+  </th>
+</tr>
+`;

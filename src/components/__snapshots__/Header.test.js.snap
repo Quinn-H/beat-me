@@ -1,0 +1,8 @@
+exports[`test Header renders correctly 1`] = `
+<header
+  className="main-header">
+  <h1>
+    BEAT ME
+  </h1>
+</header>
+`;

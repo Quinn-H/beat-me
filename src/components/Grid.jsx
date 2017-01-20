@@ -3,7 +3,7 @@ import React from 'react'
 import Track from './Track'
 
 const Grid = (props) => {
-  const tracks = props.threads.map((track, index) => <Track key={index} track={track} />)
+  const tracks = props.tracks.map((track, index) => <Track key={index} track={track} />)
   return (
     <div className="container">
       <table className="table">

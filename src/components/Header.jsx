@@ -4,7 +4,7 @@ export default React.createClass({
   render () {
     return (
       <header className="main-header">
-        <h1>This is Header</h1>
+        <h1>BEAT ME</h1>
       </header>
     )
   }

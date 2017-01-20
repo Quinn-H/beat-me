@@ -4,7 +4,7 @@ import Step from './Step'
 
 const Track = (props) => {
   const track = props.track
-  console.log(track.steps[0])
+  // console.log(track.steps[0])
   const steps = track.steps.map((step, index) => {
     return <Step key={index} step={step} />
   })

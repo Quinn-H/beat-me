@@ -4,9 +4,9 @@ const Controller = (props) => {
   const start = props.start
   const stop = props.stop
   const isPlaying = props.isPlaying
-  console.log(isPlaying)
+  // console.log(isPlaying)
   return(
-    <div>
+    <div style={{textAlign: 'center'}}>
       <button className={`btn btn-${isPlaying ? '' : 'outline-'}success`} onClick={start}>Start</button>
       <button className={`btn btn-${isPlaying ? 'outline-' : ''}danger`} onClick={stop}>Stop</button>
     </div>

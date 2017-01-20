@@ -10,6 +10,7 @@ const Step = (props) => {
   return (
     <td>
       <button
+        style={{width: '110%', height: '50px'}}
         type="button"
         className={className}
         onClick={onClick}>

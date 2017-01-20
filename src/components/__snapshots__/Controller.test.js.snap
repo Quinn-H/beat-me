@@ -1,0 +1,14 @@
+exports[`test Controller renders correctly 1`] = `
+<div>
+  <button
+    className="btn btn-outline-success"
+    onClick={[Function]}>
+    Start
+  </button>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}>
+    Stop
+  </button>
+</div>
+`;

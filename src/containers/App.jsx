@@ -32,7 +32,7 @@ const App = React.createClass({
     const currentStep = this.state.currentStep
     const tracks = this.state.tracks
 
-    console.log('step:', currentStep)
+    // console.log('step:', currentStep)
 
     for (let i = 0; i < tracks.length; i++) {
       const track = tracks[i]
@@ -51,14 +51,18 @@ const App = React.createClass({
 
   getInitialState () {
     // const stepTime = 1000 * 60 / bpm
-    const bpm = 100
+    const bpm = 115
     const numSteps = 8
     const currentStep = 0
     const intervalId = null
 
     const tracks = [
-      createTrack('Perc126-01', 'Perc126-01.wav', numSteps),
-      createTrack('PercFX126-01', 'PercFX126-01.wav', numSteps)
+      createTrack('perc-laser', 'perc-laser.wav', numSteps),
+      createTrack('Kick-dry', 'Kick-dry.wav', numSteps),
+      createTrack('hithat-electro', 'hihat-electro.wav', numSteps),
+      createTrack('snare-block', 'snare-block.wav', numSteps),
+      createTrack('tom-808', 'tom-808.wav', numSteps),
+      createTrack('crash-noise', 'crash-noise.wav', numSteps)
     ]
 
     return {
