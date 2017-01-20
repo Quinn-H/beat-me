@@ -5,10 +5,17 @@ const Controller = (props) => {
   const stop = props.stop
   const isPlaying = props.isPlaying
   // console.log(isPlaying)
+
+  const buttonStyle = {
+    width: '250px',
+    height: '80px',
+    margin: '5px'
+  }
+
   return(
     <div style={{textAlign: 'center'}}>
-      <button className={`btn btn-${isPlaying ? '' : 'outline-'}success`} onClick={start}>Start</button>
-      <button className={`btn btn-${isPlaying ? 'outline-' : ''}danger`} onClick={stop}>Stop</button>
+      <button style={buttonStyle} className={`btn btn-${isPlaying ? '' : 'outline-'}success`} onClick={start}>Start</button>
+      <button style={buttonStyle} className={`btn btn-${isPlaying ? 'outline-' : ''}danger`} onClick={stop}>Stop</button>
     </div>
   )
 }

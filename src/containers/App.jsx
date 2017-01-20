@@ -51,7 +51,7 @@ const App = React.createClass({
 
   getInitialState () {
     // const stepTime = 1000 * 60 / bpm
-    const bpm = 115
+    const bpm = 300
     const numSteps = 8
     const currentStep = 0
     const intervalId = null

@@ -5,7 +5,7 @@ import Track from './Track'
 const Grid = (props) => {
   const tracks = props.tracks.map((track, index) => <Track key={index} track={track} />)
   return (
-    <div className="container">
+    <div className="container" style={{width: '100%'}}>
       <table className="table">
         <tbody>
           {tracks}

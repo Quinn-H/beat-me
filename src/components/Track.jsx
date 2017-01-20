@@ -10,7 +10,7 @@ const Track = (props) => {
   })
   return (
     <tr className="track">
-      <th className="row">{track.name}</th>
+      <th style={{fontSize: '30px'}} className="row">{track.name}</th>
       {steps}
     </tr>
   )

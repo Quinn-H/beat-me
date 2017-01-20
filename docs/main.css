@@ -9,9 +9,9 @@ table {
 }
 .table tr.track td {
   border: none;
-  padding-top: 0;
+  /*padding-top: 0;*/
   padding-bottom: 5px;
-  padding-left: 1px;
+  /*padding-left: 1px;*/
 }
 
 .table tr.track th {
@@ -23,7 +23,7 @@ th.row {
 }
 h1 {
   text-align: center;
-  color: white;
+  color: #66ffc7;
   font-size: 8em;
   opacity:.50;
 }
