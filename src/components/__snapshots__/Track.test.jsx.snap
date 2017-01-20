@@ -2,7 +2,12 @@ exports[`test Track renders correctly 1`] = `
 <tr
   className="track">
   <th
-    className="row">
+    className="row"
+    style={
+      Object {
+        "fontSize": "30px",
+      }
+    }>
     Kick
   </th>
 </tr>

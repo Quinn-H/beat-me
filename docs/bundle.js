@@ -21572,7 +21572,7 @@
 	  },
 	  getInitialState: function getInitialState() {
 	    // const stepTime = 1000 * 60 / bpm
-	    var bpm = 115;
+	    var bpm = 300;
 	    var numSteps = 8;
 	    var currentStep = 0;
 	    var intervalId = null;
@@ -21665,17 +21665,24 @@
 	  var stop = props.stop;
 	  var isPlaying = props.isPlaying;
 	  // console.log(isPlaying)
+	
+	  var buttonStyle = {
+	    width: '250px',
+	    height: '80px',
+	    margin: '5px'
+	  };
+	
 	  return _react2.default.createElement(
 	    'div',
 	    { style: { textAlign: 'center' } },
 	    _react2.default.createElement(
 	      'button',
-	      { className: 'btn btn-' + (isPlaying ? '' : 'outline-') + 'success', onClick: start },
+	      { style: buttonStyle, className: 'btn btn-' + (isPlaying ? '' : 'outline-') + 'success', onClick: start },
 	      'Start'
 	    ),
 	    _react2.default.createElement(
 	      'button',
-	      { className: 'btn btn-' + (isPlaying ? 'outline-' : '') + 'danger', onClick: stop },
+	      { style: buttonStyle, className: 'btn btn-' + (isPlaying ? 'outline-' : '') + 'danger', onClick: stop },
 	      'Stop'
 	    )
 	  );
@@ -21709,7 +21716,7 @@
 	  });
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'container' },
+	    { className: 'container', style: { width: '100%' } },
 	    _react2.default.createElement(
 	      'table',
 	      { className: 'table' },
@@ -21778,7 +21785,7 @@
 	    { className: 'track' },
 	    _react2.default.createElement(
 	      'th',
-	      { className: 'row' },
+	      { style: { fontSize: '30px' }, className: 'row' },
 	      track.name
 	    ),
 	    steps

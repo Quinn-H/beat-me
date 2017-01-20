@@ -7,12 +7,26 @@ exports[`test Controller renders correctly 1`] = `
   }>
   <button
     className="btn btn-outline-success"
-    onClick={[Function]}>
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "80px",
+        "margin": "5px",
+        "width": "250px",
+      }
+    }>
     Start
   </button>
   <button
     className="btn btn-danger"
-    onClick={[Function]}>
+    onClick={[Function]}
+    style={
+      Object {
+        "height": "80px",
+        "margin": "5px",
+        "width": "250px",
+      }
+    }>
     Stop
   </button>
 </div>

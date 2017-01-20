@@ -1,6 +1,11 @@
 exports[`test Grid renders correctly 1`] = `
 <div
-  className="container">
+  className="container"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }>
   <table
     className="table">
     <tbody />
