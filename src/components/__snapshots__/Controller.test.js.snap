@@ -1,5 +1,10 @@
 exports[`test Controller renders correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }>
   <button
     className="btn btn-outline-success"
     onClick={[Function]}>

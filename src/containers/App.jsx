@@ -57,12 +57,12 @@ const App = React.createClass({
     const intervalId = null
 
     const tracks = [
-      createTrack('perc-laser', 'perc-laser.wav', numSteps),
-      createTrack('Kick-dry', 'Kick-dry.wav', numSteps),
-      createTrack('hithat-electro', 'hihat-electro.wav', numSteps),
-      createTrack('snare-block', 'snare-block.wav', numSteps),
-      createTrack('tom-808', 'tom-808.wav', numSteps),
-      createTrack('crash-noise', 'crash-noise.wav', numSteps)
+      createTrack('LASER', 'perc-laser.wav', numSteps),
+      createTrack('KICK', 'kick-dry.wav', numSteps),
+      createTrack('HIT HAT', 'hihat-electro.wav', numSteps),
+      createTrack('SNARE', 'snare-block.wav', numSteps),
+      createTrack('TOM 808', 'tom-808.wav', numSteps),
+      createTrack('CRASH NOISE', 'crash-noise.wav', numSteps)
     ]
 
     return {

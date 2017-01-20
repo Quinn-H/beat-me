@@ -3,6 +3,12 @@ exports[`test Step renders correctly 1`] = `
   <button
     className="btn btn-outline-primary"
     onClick={[Function]}
+    style={
+      Object {
+        "height": "50px",
+        "width": "110%",
+      }
+    }
     type="button" />
 </td>
 `;
