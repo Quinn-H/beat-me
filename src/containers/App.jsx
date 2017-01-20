@@ -4,7 +4,7 @@ import Controller from '../components/Controller'
 import Grid from '../components/Grid'
 import Header from '../components/Header'
 
-function createThread (name, sound, numSteps) {
+function createTrack (name, sound, numSteps) {
   const steps = []
   for (let i = 0; i < numSteps; i++)
     steps.push({
@@ -18,10 +18,10 @@ function createThread (name, sound, numSteps) {
   }
 }
 
-function toggleStep (state, threadIndex, stepIndex) {
+function toggleStep (state, trackIndex, stepIndex) {
   const newState = Object.assign({}, state)
-  const isSet = newState.threads[threadIndex].steps[stepIndex].isSet
-  newState.threads[threadIndex].steps[stepIndex].isSet = !isSet
+  const isSet = newState.tracks[trackIndex].steps[stepIndex].isSet
+  newState.tracks[trackIndex].steps[stepIndex].isSet = !isSet
   return newState
 }
 
@@ -34,9 +34,9 @@ const App = React.createClass({
     const currentStep = 0
     const intervalId = null
 
-    const threads = [
-      createThread('Perc126-01', 'Perc126-01.wav', numSteps),
-      createThread('PercFX126-01', 'PercFX126-01.wav', numSteps)
+    const tracks = [
+      createTrack('Perc126-01', 'Perc126-01.wav', numSteps),
+      createTrack('PercFX126-01', 'PercFX126-01.wav', numSteps)
     ]
 
     return {
@@ -44,22 +44,23 @@ const App = React.createClass({
       currentStep,
       intervalId,
       numSteps,
-      threads
+      tracks
     }
   },
 
   render () {
-    const threads = this.state.threads.map((thread, threadIndex) => {
+    const state = this.state
+    const tracks = this.state.tracks.map((track, trackIndex) => {
       return {
-        index: threadIndex,
-        name: thread.name,
-        steps: thread.steps.map((step, stepIndex) => {
+        index: trackIndex,
+        name: track.name,
+        steps: track.steps.map((step, stepIndex) => {
           return {
             index: stepIndex,
             isCurrent: step.isCurrent,
             isSet: step.isSet,
             onClick () {
-              this.setState(toggleStep(this.state, threadIndex, stepIndex))
+              this.setState(toggleStep(state, trackIndex, stepIndex))
             }
           }
         })
@@ -71,7 +72,7 @@ const App = React.createClass({
     return (
       <div>
         <Header />
-        <Grid threads={threads} />
+        <Grid threads={tracks} />
         <Controller isPlaying={isPlaying} start={start} stop={stop}/>
       </div>
     )
@@ -105,17 +106,6 @@ function clickStopStart () {
 
 function isPlaying () {
   return intervalId !== null
-}
-
-function start () {
-  document.getElementById('stop-start').innerHTML = "Stop"
-  intervalId = setInterval(beat, stepTime)
-}
-
-function stop () {
-  document.getElementById('stop-start').innerHTML = "Start"
-  clearInterval(intervalId)
-  intervalId = null
 }
 
 export default App
